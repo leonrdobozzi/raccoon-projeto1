@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* border: 1px solid red; */
+    scroll-behavior: smooth;
 }
 :root{
     --header-blue: #2571B7;
@@ -21,8 +21,9 @@
 body{
     font-family: 'segoiUI';
 }
+
 header{
-    background: url('../images/bg-header.jpg') no-repeat;
+    background: url('../images/bg-header.png') no-repeat;
     background-position: center;
     background-size: cover;
 }
@@ -45,12 +46,21 @@ header .menu img{
     height: 18px
 }
 
+header .menu .logotipo{
+    display: none;
+}
+
 header .menu button{
     width: 115px;
     height: 25px;
     background: var(--button-blue);
     color: var(--text-white);
     border: none;
+    cursor: pointer;
+}
+
+header .menu .menu-buttons ul{
+    display: none;
 }
 
 header .about-header{
@@ -86,23 +96,29 @@ header .about-header button {
     color: var(--text-white);
     background: var(--button-content-header-blue);
     border: none;
+    cursor: pointer
 }
 
-header .about-header .logotipo h4 {
-    font-size: 34px;
-    color: var(--text-white);
+header .about-header .header-footer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 80%;
+    height: 80px;
 }
 
-header .about-header .logotipo p {
-    font-size: 14px;
-    color: var(--text-white);
-    font-weight: 100;
+
+header .about-header .header-footer .arrow-down{
+    display: none;
 }
 
-header .about-header .logotipo {
+header .about-header .header-footer .logotipo {
     position: absolute;
-    height: 50px;
     top: calc(90% - 25px);
+}
+
+header .about-header .header-footer .logotipo img{
+    width: 170px;
 }
 
 .container {
@@ -117,6 +133,11 @@ header .about-header .logotipo {
     font-size: 15px;
     margin: 15px 0;
     line-height: 25px;
+}
+
+.container article span{
+    color: inherit;
+    font-weight: inherit;
 }
 
 .container main h3{
@@ -195,11 +216,12 @@ header .about-header .logotipo {
     margin: 25px 0;
 } 
 
+
 .container aside .contents .card-content {
     display: flex; 
     justify-content: space-between;
 }
-
+    
 .container aside .contents .card-content img{
     margin: 0 15px;
 }
@@ -208,6 +230,11 @@ header .about-header .logotipo {
     font-size: 15px;
     margin: 10px 0;
 }
+
+.container aside .contents .card-content .content hr{
+    display: none;
+}
+
 .container aside .contents .card-content .content p{
     font-size: 12px;
     margin: 15px 0 5px;
@@ -287,6 +314,10 @@ header .about-header .logotipo {
     font-size: 24px;
     line-height: 36px;
     text-align: center;
+    min-height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .container p{
@@ -300,6 +331,8 @@ header .about-header .logotipo {
     align-items: center;
     flex-direction: column;
     background: #E6E6E6;
+    max-width: 564px;
+    margin: 0 auto;
 }
 
 .container form label{
@@ -346,9 +379,18 @@ footer .logotipo p {
     margin: 0;
 }
 
-footer .logotipo {
-    height: 70px;
-    width: 150px;
+footer .logotipos-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2C5898;
+    height: 100px;
+}
+
+footer .logotipos-footer img{
+    margin: 0 18px;
+    width: 90px;
+    height: 25px;
 }
 
 footer{
@@ -362,4 +404,275 @@ footer{
 footer small {
     color: #B4B4B4;
     font-size: 12px;
+}
+
+@media screen and (min-width: 576px){
+    header .about-header h1{
+        font-size: 56px;
+    }
+    
+    header .about-header h3{
+        font-size: 28px;
+    }
+}
+
+@media screen and (min-width: 768px){
+    header .about-header h1{
+        font-size: 64px;
+    }
+    
+    header .about-header h3{
+        font-size: 36px;
+    }
+}
+
+@media screen and (min-width: 992px){
+    header .menu .button-menu{
+        display: none;
+    }
+
+    header .menu{
+        height: 80px;
+        padding: 0 80px;
+    }
+
+    header .menu .logotipo{
+        display: block;
+    }
+
+    header .menu .logotipo img{
+        width: 124px;
+        height: 26px;
+    }
+
+    header .menu .menu-buttons ul li{
+        display: inline-block;
+        color: #fff;
+        margin: 15px 25px;
+        transition: color .2s ease-in-out;
+    }
+
+    header .menu .menu-buttons ul li:hover{
+        color: #DEDEDE;
+    }
+
+    header .menu .menu-buttons{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    header .menu .menu-buttons ul{
+        display: block;
+    }
+
+    header .menu .menu-buttons button{
+        height: 37px;
+        width: 138px;
+        margin-left: 56px;
+    }
+
+    header .menu .menu-buttons button:hover{
+        filter: brightness(0.9);
+    }
+
+    header .about-header {
+        align-items: flex-start;
+        padding: 120px;
+    }
+    
+
+    header .about-header h3 {
+        text-align: start;
+        font-size: 32px;
+    }
+
+    header .about-header button {
+        width: 266px;
+        height: 67px;
+        font-size: 28px;
+    }
+    header .about-header .header-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+        position: absolute;
+        height: 80px;
+        top: 90%;
+    }
+
+    header .about-header .header-footer .logotipo{
+        position: initial;
+        height: 100%;
+    }
+    
+    header .about-header .header-footer img{
+        width: 56px;
+        height: 30px;
+    }
+
+    header .about-header .header-footer .arrow-down{
+        display: block;
+    }
+
+    .container article p,
+    .container main p{
+        font-size: 20px;
+    }
+
+    .container article p span{
+        color: #F25022;
+        font-weight: 700;
+    } 
+
+    .container main h3 {
+        font-size: 40px;
+        margin: 95px 0 40px;
+    }
+
+    .container .cards{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items:  center;
+        justify-content: center;
+    }
+
+    .container .cards .card{
+        height: 120px;
+        width: 40%;
+        margin: 10px 40px;
+        padding: 0 20px;
+    }
+
+    .content-container{
+        display: flex;
+    }
+
+    .container aside .contents hr{
+        display: none;
+    }
+
+    .container aside .contents h3{
+        font-size: 40px;
+        margin: 96px 0 46px;
+    }
+
+    .container aside .contents .card-content {
+        display: flex; 
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .container aside .contents .card-content .content{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .container aside .contents .card-content img{
+        width: 160px;
+        height: 160px; 
+    }
+
+    .container aside .contents .card-content .content hr{
+        display: block;
+        width: 15%;
+        border: 2px solid #DEDEDE;
+        margin: 10px 0;
+    }
+    .container aside .contents .card-content .content h4{
+        font-size: 20px;
+        margin: 10px 0;
+    }
+    .container aside .contents .card-content .content p{
+        font-size: 16px;
+        margin: 15px 0 5px;
+        width: 50%;
+        text-align: center;
+    }
+    .container aside .contents .card-content .content button{
+        font-size: 16px;
+        width: 110px;
+        height: 41px;
+    }
+    
+    .container aside .contents .card-content .content-1 button{
+        border: 2px solid #7FBA00;
+    }
+    .container aside .contents .card-content .content-2 button{
+        border: 2px solid #00A4EF;
+    }
+    .container aside .contents .card-content .content-3 button{
+        border: 2px solid #FFB900;
+    }
+
+    .warning h3{
+        font-size: 40px;
+    }
+
+    .warning .warns{
+        display: flex;
+    }
+
+    .warning .warns .warn h4{
+        font-size: 24px;
+    }
+
+    .warning .warns .warn p{
+        font-size: 18px;
+    }
+
+
+    .happy-team{
+        padding: 48px 60px;
+        margin: 100px 0;
+        width: 100%;
+    }
+    
+    .happy-team p{
+        font-size: 48px;
+        line-height: 64px;
+    }
+
+    .container form input{
+        height: 56px;
+        font-size: 20px;
+    }
+
+    .container form label{
+        margin-top: 28px;
+        font-size: 14px;
+    }
+
+    .container form button{
+        height: 67px;
+        font-size: 28px;
+    }
+
+    footer .logotipos-footer img{
+    margin: 0 28px;
+    width: 171px;
+    height: 35px;
+    }
+
+}
+
+@media screen and (min-width: 1200px){
+    header .menu .menu-buttons button{
+        height: 47px;
+        width: 188px;
+        margin-left: 106px;
+        font-size: 20px;
+    }
+
+    header .menu .menu-buttons ul li{
+        display: inline-block;
+        color: #fff;
+        margin: 15px 45px;
+        font-size: 20px;
+    }
 }

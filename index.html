@@ -10,23 +10,41 @@
 <body>
     <header>
         <nav class="menu">
-            <img src="./images/menu-button.svg" alt="Botão de menu">
-            <button>Lorem Ipsum</button>
+            <img class="button-menu" src="./images/menu-button.svg" alt="Botão de menu">
+            <div class="logotipo"><img src="/images/logotipo.svg"></div>
+            <div class="menu-buttons">
+                <ul>
+                    <a href="#">
+                        <li>Lorem Ipsum</li>
+                    </a>
+                    <a href="#">
+                        <li>Lorem Ipsum</li>
+                    </a>
+                    <a href="#">
+                        <li>Lorem Ipsum</li>
+                    </a>
+                </ul>
+                <button>Lorem Ipsum</button>
+            </div>
         </nav>
         <section class="about-header">
                 <h1>Lorem ipsum</h1>
                 <h3>Lorem ipsum dolor sit amet, consectetur adpiscing elit</h3>
                 <button>Lorem Ipsum</button>
-                <div class="logotipo">
-                    <h4>LOREM</h4>
-                    <p>DOLOR SIT AMET</p>
-                </div>
+                <section class="header-footer">
+                    <a href="#cards">
+                        <img class="arrow-down" src="./images/Arrow-down.svg">
+                    </a>
+                    <div class="logotipo">
+                        <img src="images/logotipo.svg">
+                    </div>
+                </section>
         </section>
     </header>
     <div class="container">
         <article>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                <span>Lorem ipsum</span> dolor sit amet, consectetur adipiscing elit. 
                 Aliquam id congue dui, varius efficitur dui. 
                 Mauris lobortis, diam vel tincidunt finibus, 
                 urna magna ultricies neque, ut volutpat sem elit vel 
@@ -41,7 +59,7 @@
             </p>
         </article>
         <main>
-            <h3>Lorem Ipsum</h3>
+            <h3 id="cards">Lorem Ipsum</h3>
             <p>
                 Lorem ipsum dolor sit amet, consectetur 
                 adipiscing elit. 
@@ -113,43 +131,48 @@
         <aside>
             <section class="contents">
                 <h3>Lorem ipsum</h3>
-                <div class="card-content">
-                    <div class="content content-1">
-                        <h4>Lorem ipsum dolor</h4>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectur adipiscing
-                            elit, sed do eiusmod tempor incididunt ui labore et
-                            dolore magna
-                        </p>
-                        <button>Lorem ipsum</button>
+                <div class="content-container">
+                    <div class="card-content">
+                        <div class="content content-1">
+                            <h4>Lorem ipsum dolor</h4>
+                            <hr>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectur adipiscing
+                                elit, sed do eiusmod tempor incididunt ui labore et
+                                dolore magna
+                            </p>
+                            <button>Lorem ipsum</button>
+                        </div>
+                        <img src="./images/group-green.svg" alt="Parceria fechada">
                     </div>
-                    <img src="./images/group-green.svg" alt="Parceria fechada">
-                </div>
-                <hr>
-                <div class="card-content">
-                    <div class="content content-2">
-                        <h4>Lorem ipsum dolor</h4>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectur adipiscing
-                            elit, sed do eiusmod tempor incididunt ui labore et
-                            dolore magna
-                        </p>
-                        <button>Lorem ipsum</button>
+                    <hr>
+                    <div class="card-content">
+                        <div class="content content-2">
+                            <h4>Lorem ipsum dolor</h4>
+                            <hr>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectur adipiscing
+                                elit, sed do eiusmod tempor incididunt ui labore et
+                                dolore magna
+                            </p>
+                            <button>Lorem ipsum</button>
+                        </div>
+                        <img src="./images/group-blue.svg" alt="Segurança">
                     </div>
-                    <img src="./images/group-blue.svg" alt="Segurança">
-                </div>
-                <hr>
-                <div class="card-content">
-                    <div class="content content-3">
-                        <h4>Lorem ipsum dolor</h4>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectur adipiscing
-                            elit, sed do eiusmod tempor incididunt ui labore et
-                            dolore magna
-                        </p>
-                        <button>Lorem ipsum</button>
+                    <hr>
+                    <div class="card-content">
+                        <div class="content content-3">
+                            <h4>Lorem ipsum dolor</h4>
+                            <hr>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectur adipiscing
+                                elit, sed do eiusmod tempor incididunt ui labore et
+                                dolore magna
+                            </p>
+                            <button>Lorem ipsum</button>
+                        </div>
+                        <img src="./images/group-yellow.svg" alt="Qualidade">
                     </div>
-                    <img src="./images/group-yellow.svg" alt="Qualidade">
                 </div>
             </section>
         </aside>
@@ -212,9 +235,9 @@
             <button>Lorem ipsum</button>
         </form>
         <footer>
-            <div class="logotipo">
-                <h4>LOREM</h4>
-                <p>DOLOR SIT AMET</p>
+            <div class="logotipos-footer">
+                <img src="images/logotipo-footer.png">
+                <img src="images/logotipo-footer.png">
             </div>
             <small>&copy; Copyright Micro Brasil 2018</small>
         </footer>
