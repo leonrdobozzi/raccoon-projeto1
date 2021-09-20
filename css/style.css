@@ -18,6 +18,10 @@
     url('../fonts/segoiUI/SegoeUI.ttf')
 }
 
+button:hover{
+    filter: brightness(1.2);
+}
+
 body{
     font-family: 'segoiUI';
 }
@@ -470,10 +474,6 @@ footer small {
         height: 37px;
         width: 138px;
         margin-left: 56px;
-    }
-
-    header .menu .menu-buttons button:hover{
-        filter: brightness(0.9);
     }
 
     header .about-header {
