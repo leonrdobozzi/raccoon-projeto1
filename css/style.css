@@ -2,8 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
 }
+
 :root{
     --header-blue: #2571B7;
     --button-blue: #002050;
@@ -13,9 +13,17 @@
 }
 
 @font-face{
-    font-family: 'segoiUI';
+    font-family: 'segoiUI', sans-serif;
     src:
-    url('../fonts/segoiUI/SegoeUI.ttf')
+    url('../fonts/segoiUI/SegoeUI.ttf');
+}
+
+html{ 
+    scroll-behavior: smooth;
+}
+
+button {
+    cursor: pointer;
 }
 
 button:hover{
@@ -23,13 +31,14 @@ button:hover{
 }
 
 body{
-    font-family: 'segoiUI';
+    font-family: 'segoiUI', sans-serif;
 }
 
 header{
     background: url('../images/bg-header.png') no-repeat;
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 header .menu {
@@ -60,7 +69,6 @@ header .menu button{
     background: var(--button-blue);
     color: var(--text-white);
     border: none;
-    cursor: pointer;
 }
 
 header .menu .menu-buttons ul{
@@ -81,7 +89,7 @@ header .about-header h1{
     color: var(--text-white);
 }
 
-header .about-header h3{
+header .about-header h2{
     color: initial;
     font-size: 24px;
     width: 90%;
@@ -100,7 +108,6 @@ header .about-header button {
     color: var(--text-white);
     background: var(--button-content-header-blue);
     border: none;
-    cursor: pointer
 }
 
 header .about-header .header-footer {
@@ -123,6 +130,7 @@ header .about-header .header-footer .logotipo {
 
 header .about-header .header-footer .logotipo img{
     width: 170px;
+    height: 30px;
 }
 
 .container {
@@ -172,10 +180,13 @@ header .about-header .header-footer .logotipo img{
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 0 15px;
 }
 
 .container .cards .card img{
-    margin: 0 10px 0 15px;
+    margin: 0 15px 0 20px;
+    width: 48.95px;
+    height: 48.95px;
 }
 
 .container .cards .card article h3{
@@ -212,6 +223,26 @@ header .about-header .header-footer .logotipo img{
 .container .cards .card-6{
     background-color: #00AFF0;
 }
+.container .cards .card-7{
+    background-color: #094AB2;
+}
+.container .cards .card-8{
+    background-color: #0073C6;
+}
+.container .cards .card-9{
+    background-color: #0093BE;
+}
+.container .cards .card-10{
+    background-color: #5558AF;
+}
+
+.container .cards .card-7,
+.container .cards .card-8,
+.container .cards .card-9,
+.container .cards .card-10{
+    display: none;
+}
+
 
 .container aside .contents h3{
     text-align: center;
@@ -224,10 +255,14 @@ header .about-header .header-footer .logotipo img{
 .container aside .contents .card-content {
     display: flex; 
     justify-content: space-between;
+    padding: 25px 5px;
+    align-items: center;
 }
     
 .container aside .contents .card-content img{
-    margin: 0 15px;
+    width: 100px;
+    height: 100px; 
+    margin-left: 30px;
 }
 
 .container aside .contents .card-content .content h4{
@@ -254,17 +289,33 @@ header .about-header .header-footer .logotipo img{
 }
 
 .container aside .contents .card-content .content-1 button{
-    border: 1px solid #7FBA00;
+    border: 2px solid #7FBA00;
     color: #7FBA00;
 }
+
+.container aside .contents .card-content .content-1 button:hover{
+    background: #7FBA00;
+    color: #fff;
+}
+
 .container aside .contents .card-content .content-2 button{
-    border: 1px solid #00A4EF;
+    border: 2px solid #00A4EF;
     color: #00A4EF;
 }
+.container aside .contents .card-content .content-2 button:hover{
+    background: #00A4EF;
+    color: #fff;
+}
+
 .container aside .contents .card-content .content-3 button{
-    border: 1px solid #FFB900;
+    border: 2px solid #FFB900;
     color: #FFB900;
 }
+.container aside .contents .card-content .content-3 button:hover{
+    background: #FFB900;
+    color: #fff;
+}
+
 .container aside .contents .card-content .content-1 h4{
     color: #7FBA00;
 }
@@ -330,6 +381,17 @@ header .about-header .header-footer .logotipo img{
     margin: 25px 0;
 }
 
+.happy-team p{
+    color: var(--text-white);
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    min-height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .container form{
     display: flex;
     align-items: center;
@@ -369,20 +431,6 @@ header .about-header .header-footer .logotipo img{
     margin: 25px 0;
 }
 
-footer .logotipo h4 {
-    font-size: 34px;
-    color: #000;
-    margin: 0;
-    text-align: center;
-}
-
-footer .logotipo p {
-    font-size: 14px;
-    color: #000;
-    font-weight: 100;
-    margin: 0;
-}
-
 footer .logotipos-footer {
     display: flex;
     align-items: center;
@@ -393,7 +441,7 @@ footer .logotipos-footer {
 
 footer .logotipos-footer img{
     margin: 0 18px;
-    width: 90px;
+    width: 120px;
     height: 25px;
 }
 
@@ -415,7 +463,7 @@ footer small {
         font-size: 56px;
     }
     
-    header .about-header h3{
+    header .about-header h2{
         font-size: 28px;
     }
 }
@@ -425,7 +473,7 @@ footer small {
         font-size: 64px;
     }
     
-    header .about-header h3{
+    header .about-header h2{
         font-size: 36px;
     }
 }
@@ -482,7 +530,7 @@ footer small {
     }
     
 
-    header .about-header h3 {
+    header .about-header h2 {
         text-align: start;
         font-size: 32px;
     }
@@ -514,6 +562,21 @@ footer small {
 
     header .about-header .header-footer .arrow-down{
         display: block;
+        animation: arrowScrollView 2s infinite;
+    }
+
+    @keyframes arrowScrollView {
+        0%{
+            transform: scale(1);
+        }
+
+        50%{
+            transform: scale(1.3);
+        }
+
+        100%{
+            transform: scale(1);
+        }
     }
 
     .container article p,
@@ -573,9 +636,18 @@ footer small {
         flex-direction: column;
     }
     
+   
+    .container .cards .card-7,
+    .container .cards .card-8,
+    .container .cards .card-9,
+    .container .cards .card-10{
+        display: flex; 
+    }
+
     .container aside .contents .card-content img{
-        width: 160px;
-        height: 160px; 
+        margin: 0 15px;
+        width: 40%;
+        height: 40%;
     }
 
     .container aside .contents .card-content .content hr{
